@@ -11,21 +11,16 @@ public:
 
 class StraightlnSort : public Sort {
 
-    void printstring(){
-        cout << "Result of straightln sort: ";
-    }
-
-    void sort(int *arr, int n) override {
-        int i,j=0,x=0,key=1,t;
-        printstring();
-        for(i=1; i<n;i++){
-            x=arr[i];
-            j=i;
-            while ((j>0)&&(x<arr[j-1])){
-                arr[j]=arr[j-1];
+    void sort(int *arr, int n) {
+        int i, j = 0 x = 0, key = 1, t;
+        for(i = 1; i < n; i++){
+            x = arr[i];
+            j = i;
+            while ((j > 0) && (x < arr[j-1])){
+                arr[j] = arr[j-1];
                 j--;
             };
-            arr[j]=x;
+            arr[j] = x;
         };
     };
 };
